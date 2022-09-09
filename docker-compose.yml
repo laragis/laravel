@@ -7,7 +7,7 @@ services:
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
-        image: sail-8.1/app
+        image: ttungbmt/sail:8.1
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
@@ -24,6 +24,7 @@ services:
             - sail
         depends_on:
             - mysql
+
     mysql:
         image: 'mysql/mysql-server:8.0'
         ports:
@@ -44,6 +45,7 @@ services:
             test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
             retries: 3
             timeout: 5s
+
 networks:
     sail:
         driver: bridge
