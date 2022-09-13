@@ -1,8 +1,8 @@
 ## Installation
 
 ```shell
-git clone https://github.com/laragis/laravel.git -b auth laravel-auth
-cd laravel-auth
+git clone https://github.com/laragis/laravel.git -b skeleton laravel-skeleton
+cd laravel-skeleton
 
 docker run --rm \
     -u "$(id -u):$(id -g)" \
